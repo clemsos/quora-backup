@@ -21,7 +21,7 @@ def log_if_v(msg):
 def parse_quora_date(origin, quora_str):
     days_of_week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     months_of_year = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    _, _, date_str = quora_str.partition('Added ')
+    _, _, date_str = quora_str.partition('Answered ')
     date_str = date_str.strip()
     if date_str == '':
         raise ValueError('"%s" does not appear to indicate when answer was added' % quora_str)
